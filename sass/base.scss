@@ -1,0 +1,208 @@
+@import "compass/css3";
+@import "compass/utilities";
+
+$c1: #D96666;
+$c2: #D98032;
+$c3: #F2A950;
+$c4: #736C48;
+$page-bg: #2A2D34;
+
+
+*{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+html, body{
+  background-color: $page-bg;
+  height: 100%;
+}
+
+img{
+  opacity: 0;
+  border: null;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+h1{
+  font-weight: 200;
+  color: #ffffff;
+}
+
+.thumbnails{
+  margin-left: -16px;
+}
+
+.push-right{
+  float: right !important;
+}
+
+
+.finger {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  background-color: #2d6987;
+  border: 1px solid #ffffff;
+  opacity: .5;
+  z-index: 9999;
+
+  //margin-top: -20px;
+  //margin-left: -20px;
+}
+
+
+//.thumbnails{
+//
+//  margin-left: 0px;
+//  //padding-left: 19px;
+//  padding-bottom: 20px;
+//
+//  > li {
+//    margin: 0;
+//    float: left;
+//  }
+//}
+//
+//.thumbnail{
+//  border: none;
+//  padding: 0;
+//}
+
+
+
+
+
+
+
+
+
+
+
+//.arrow-up {
+//  width: 0;
+//  height: 0;
+//  border-left: 20px solid transparent;
+//  border-right: 20px solid transparent;
+//
+//  border-bottom: 20px solid black;
+//}
+//
+//.arrow-down {
+//  width: 0;
+//  height: 0;
+//  border-left: 20px solid transparent;
+//  border-right: 20px solid transparent;
+//
+//  border-top: 20px solid black;
+//}
+
+.arrow-right-w {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #ffffff;
+}
+
+.arrow-left-w {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right:20px solid #ffffff;
+}
+
+.arrow-right-b {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #1C1D22;
+}
+
+.arrow-left-b {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right:20px solid #1C1D22;
+}
+
+
+
+.loading {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px !important;
+  margin-top: -50px !important;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 100px;
+  height: 100px;
+  border: 13px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 25px 2px;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.7);
+  color: rgba(179, 179, 179, 0.7);
+  border-right-color: transparent;
+  border-top-color: transparent;
+  -webkit-animation: spin-right 1s linear infinite;
+  margin: 30px auto 0;
+}
+
+@-webkit-keyframes spin-right {
+  from {
+    -webkit-transform: rotate(0deg);
+    opacity: 0.2;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    opacity: 1.0;
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    opacity: 0.2;
+  }
+}
+
+
+
+#leap-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  padding: 20px;
+
+  canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    pointer-events: none;
+    opacity: .5;
+  }
+
+  label{
+    color: #ffffff;
+  }
+
+}
+
+.leap-focus{
+  @include box-shadow(rgba(255,0,0,.7) 0 0 0 20px);
+  @include border-radius(25px);
+}

@@ -1,0 +1,218 @@
+@import "base.scss";
+@import "mixin.scss";
+@import "home.scss";
+@import "sales.scss";
+@import "products.scss";
+@import "product.scss";
+@import "hero.scss";
+@import "nav.scss";
+
+.main-content {
+  color: rgb(238, 238, 238);
+  position: relative;
+  width: 980px;
+  padding-top: 240px;
+}
+
+footer {
+  background-color: $c1;
+  height: 50px;
+  max-width: 940px;
+  margin: auto;
+}
+
+.viewer {
+  opacity: 0;
+  display: block;
+  position: absolute;
+}
+
+
+
+.thumb-wrap {
+
+  a{
+    color: #ffffff;
+  }
+
+  &:hover {
+
+    .thumb {
+
+      .thumbnail-women {
+        border-color: $c1;
+      }
+
+      .thumbnail-men {
+        border-color: $c2;
+      }
+
+      .thumbnail-kids {
+        border-color: $c3;
+      }
+
+      .thumbnail-home {
+        border-color: $c4;
+      }
+
+      legend {
+        display: block;
+        bottom: -1px;
+      }
+    }
+
+    .extruder-wrap {
+      .extruder-women{
+        background-color: $c1 !important;
+      }
+      .extruder-men{
+        background-color: $c2 !important;
+      }
+      .extruder-kids{
+        background-color: $c3 !important;
+      }
+      .extruder-home{
+        background-color: $c4 !important;
+      }
+    }
+  }
+
+  .thumb {
+
+    margin: .5px;
+    overflow: hidden;
+    position: relative;
+
+    legend {
+
+      @include transition-property(all);
+      @include transition-duration(.2s);
+      @include transition-timing-function(ease-out);
+
+      padding: 4px;
+
+      margin: 0;
+      bottom: -55px;
+      position: absolute;
+
+      h5 {
+        position: absolute;
+        top: 5px;
+        text-align: center;
+        text-shadow: 0 0 3px rgba(0, 0, 0, .75);
+        color: #ffffff;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+        overflow: hidden;
+        margin-left: 10px;
+        padding-right: 20px;
+
+      }
+
+      .gradient {
+        opacity: 1;
+        width: 100% !important;
+        height: 50px !important;
+        background: none;
+      }
+
+    }
+
+  }
+}
+
+.extruder-wrap {
+  @include perspective(800px);
+  @include perspective-origin(50% 50%);
+  padding-bottom: 1px;
+
+  .extruder {
+    background-color: #595D62;
+    height: 40px;
+    @include rotateX(-60deg);
+    @include transform-origin(0 0 0 0);
+
+    .navbar-inner {
+      background: none;
+      margin-left: 22px;
+    }
+  }
+}
+
+//.thumb-listing:nth-child(odd){
+//  h3{
+//    color: #ff0000;
+//
+//  }
+//}
+
+.rows{
+
+  margin: 0 20px !important;
+
+  li{
+    float: none;
+    list-style: none;
+
+
+    &:nth-child(odd){
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+
+    }
+
+    .thumb-listing-holder{
+      border-radius: 4px;
+      padding: 10px 20px !important;
+
+
+    }
+
+    &:hover{
+
+      .thumb-listing{
+        .extruder-women{
+          background-color: $c1 !important;
+        }
+        .extruder-men{
+          background-color: $c2 !important;
+        }
+        .extruder-kids{
+          background-color: $c3 !important;
+        }
+        .extruder-home{
+          background-color: $c4 !important;
+        }
+      }
+
+    }
+
+
+    a{
+      color: #ffffff;
+    }
+
+    h2 {
+
+      font-size: 25px;
+      font-weight: 200;
+      padding: 30px;
+      text-shadow: 0 0 3px rgba(0, 0, 0, .75);
+      max-width: 790px;
+    }
+
+    //img{
+    //  width: 91px !important;
+    //  height: 121px !important;
+    //
+    //}
+  }
+}
+
+
+
+//.thumb-wrap:hover .extruder-wrap .extruder-men
+
+//.thumb-wrap:hover .extruder-wrap extruder-men
